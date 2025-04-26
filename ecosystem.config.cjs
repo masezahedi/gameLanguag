@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   apps: [
     {
       name: 'leitner-app',
@@ -10,7 +10,9 @@ export default {
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G'
+      max_memory_restart: '1G',
+      interpreter: 'node',
+      interpreter_args: '--experimental-specifier-resolution=node --no-warnings'
     }
   ]
 }; 
